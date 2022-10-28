@@ -1,0 +1,134 @@
+[
+    {
+        "executionDate": "04/2019",
+        "groups": [
+            {
+                "profileName" : "201904P1"
+            },
+            {
+                "profileName" : "201904P2"
+            },
+            {
+                "profileName" : "201904P3"
+            },
+            {
+                "profileName" : "201904P4"
+            }
+        ]
+    },
+    {
+        "executionDate": "03/2019",
+        "groups": [
+            {
+                "profileName" : "201903P1"
+            },
+            {
+                "profileName" : "201903P2"
+            },
+            {
+                "profileName" : "201903P3"
+            }
+        ]
+    },
+    {
+        "executionDate": "02/2019",
+        "groups": [
+            {
+                "profileName" : "201902P1"
+            },
+            {
+                "profileName" : "201902P2"
+            },
+            {
+                "profileName" : "201902P3"
+            },
+            {
+                "profileName" : "201902P4"
+            },
+            {
+                "profileName" : "201902P5"
+            },
+            {
+                "profileName" : "201902P6"
+            },
+            {
+                "profileName" : "201902P7"
+            }
+        ]
+    },
+    {
+        "executionDate": "01/2019",
+        "groups": [
+            {
+                "profileName" : "201901P1"
+            },
+            {
+                "profileName" : "201901P2"
+            },
+            {
+                "profileName" : "201901P3"
+            },
+            {
+                "profileName" : "201901P4"
+            }
+        ]
+    },
+    {
+        "executionDate": "12/2018",
+        "groups": [
+            {
+                "profileName" : "201812P1"
+            },
+            {
+                "profileName" : "201812P2"
+            },
+            {
+                "profileName" : "201812P3"
+            },
+            {
+                "profileName" : "201812P4"
+            },
+            {
+                "profileName" : "201812P5"
+            },
+            {
+                "profileName" : "201812P6"
+            },
+            {
+                "profileName" : "201812P7"
+            },
+            {
+                "profileName" : "201812P8"
+            },
+            {
+                "profileName" : "201812P9"
+            }
+        ]
+    },
+    {
+        "executionDate": "11/2018",
+        "groups": [
+            {
+                "profileName" : "201811P1"
+            },
+            {
+                "profileName" : "201811P2"
+            },
+            {
+                "profileName" : "201811P3"
+            },
+            {
+                "profileName" : "201811P4"
+            },
+            {
+                "profileName" : "201811P5"
+            },
+            {
+                "profileName" : "201811P6"
+            },
+            {
+                "profileName" : "201811P7"
+            }
+        ]
+    }
+]

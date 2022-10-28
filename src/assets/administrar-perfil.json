@@ -1,0 +1,116 @@
+{
+    "groups": [
+        {
+            "profile": "201904P1",
+            "templates": [
+                {
+                    "couponName": "Cupón 1",
+                    "couponType": "N",
+                    "nominal": true,
+                    "redeemable": {
+                        "category": 23,
+                        "categoryName": "Cine"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                },
+                {
+                    "couponName": "Cupón 2",
+                    "couponType": "N",
+                    "nominal": false,
+                    "redeemable": {
+                        "category": 24,
+                        "categoryName": "Restaurante"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P2",
+            "templates": [
+                {
+                    "couponName": "Cupón 1",
+                    "couponType": "N",
+                    "nominal": true,
+                    "redeemable": {
+                        "category": 23,
+                        "categoryName": "Cine"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P3",
+            "templates": [
+                {
+                    "couponName": "Cupón 2",
+                    "couponType": "N",
+                    "nominal": false,
+                    "redeemable": {
+                        "category": 24,
+                        "categoryName": "Restaurante"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                },
+                {
+                    "couponName": "Cupón 3",
+                    "couponType": "N",
+                    "nominal": true,
+                    "redeemable": {
+                        "category": 26,
+                        "categoryName": "Gasolina"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P4",
+            "templates": [
+                {
+                    "couponName": "Cupón 1",
+                    "couponType": "N",
+                    "nominal": true,
+                    "redeemable": {
+                        "category": 23,
+                        "categoryName": "Cine"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                },
+                {
+                    "couponName": "Cupón 5",
+                    "couponType": "N",
+                    "nominal": true,
+                    "redeemable": {
+                        "category": 27,
+                        "categoryName": "Deporte"
+                    },
+                    "amount": 40,
+                    "maximumDiscountAmount": 40,
+                    "minimumTransactionAmount": 200,
+                    "quantity": 1
+                }
+            ]
+        }
+    ],
+    "executionDate": "2019-04-01"
+}

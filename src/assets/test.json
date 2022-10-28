@@ -1,0 +1,90 @@
+{
+    "groups": [
+        {
+            "profile": "201904P1",
+            "templates": [
+                {
+                    "couponType": "N",
+                    "profile": "201904P1",
+                    "couponName": "C1",
+                    "nominal": true,
+                    "amount": 40,
+                    "redeemable": {
+                        "category": 26
+                    },
+                    "minimumTransactionAmount": 200,
+                    "maximumDiscountAmount": 40,
+                    "quantity": 1
+                },
+                {
+                    "couponType": "N",
+                    "profile": "201904P1",
+                    "couponName": "C2",
+                    "nominal": true,
+                    "amount": 20,
+                    "redeemable": {
+                        "category": 21
+                    },
+                    "minimumTransactionAmount": 100,
+                    "maximumDiscountAmount": 20,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P2",
+            "templates": [
+                {
+                    "couponType": "N",
+                    "profile": "201904P2",
+                    "couponName": "C1",
+                    "nominal": true,
+                    "amount": 40,
+                    "redeemable": {
+                        "category": 26
+                    },
+                    "minimumTransactionAmount": 200,
+                    "maximumDiscountAmount": 40,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P3",
+            "templates": [
+                {
+                    "couponType": "N",
+                    "profile": "201904P3",
+                    "couponName": "C1",
+                    "nominal": true,
+                    "amount": 40,
+                    "redeemable": {
+                        "category": 26
+                    },
+                    "minimumTransactionAmount": 200,
+                    "maximumDiscountAmount": 40,
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "profile": "201904P4",
+            "templates": [
+                {
+                    "couponType": "N",
+                    "profile": "201904P4",
+                    "couponName": "C1",
+                    "nominal": true,
+                    "amount": 40,
+                    "redeemable": {
+                        "category": 26
+                    },
+                    "minimumTransactionAmount": 200,
+                    "maximumDiscountAmount": 40,
+                    "quantity": 1
+                }
+            ]
+        }
+    ],
+    "executionDate": "2019-04-01"
+}

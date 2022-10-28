@@ -1,0 +1,80 @@
+[
+    {
+        "couponName": "Cupón 1",
+        "couponType": "N",
+        "nominal": true,
+        "redeemable": {
+            "category": 23,
+            "categoryName": "Cine"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    },
+    {
+        "couponName": "Cupón 2",
+        "couponType": "N",
+        "nominal": false,
+        "redeemable": {
+            "category": 24,
+            "categoryName": "Restaurante"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    },
+    {
+        "couponName": "Cupón 3",
+        "couponType": "N",
+        "nominal": true,
+        "redeemable": {
+            "category": 26,
+            "categoryName": "Gasolina"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    },
+    {
+        "couponName": "Cupón 4",
+        "couponType": "N",
+        "nominal": true,
+        "redeemable": {
+            "category": 24,
+            "categoryName": "Restaurante"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    },
+    {
+        "couponName": "Cupón 5",
+        "couponType": "N",
+        "nominal": true,
+        "redeemable": {
+            "category": 27,
+            "categoryName": "Deporte"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    },
+    {
+        "couponName": "Cupón 6",
+        "couponType": "N",
+        "nominal": true,
+        "redeemable": {
+            "category": 28,
+            "categoryName": "Ropa"
+        },
+        "amount": 40,
+        "maximumDiscountAmount": 40,
+        "minimumTransactionAmount": 200,
+        "quantity": 1
+    }
+]

@@ -1,0 +1,63 @@
+html, body {
+  height: 100% !important;
+  min-height: 100%;
+}
+
+.page-section {
+  margin-top: 3%;
+}
+
+/*/deep/ .fixed-top {
+  position: unset !important;
+}
+
+/deep/ #OrdersSection {
+  visibility: hidden !important;
+}*/
+
+#OrderScroll {
+  margin: 0px 50px 50px 50px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.mat-table {
+  width: 100%;
+  background-color: transparent !important;
+}
+
+tr.mat-footer-row {
+  background-color: #FFFFFF;
+  font-weight: bold;
+}
+
+.mat-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}
+
+#ButtonRow {
+  margin-top: 35px;
+}
+
+#submitOrder #goingBack {
+  margin-left: 35%;
+}
+
+#PricingSection {
+  display: block;
+  align-items: center;
+  align-content: center;
+}

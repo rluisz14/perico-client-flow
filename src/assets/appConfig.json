@@ -1,0 +1,22 @@
+{
+    "url": "https://api.us.apiconnect.ibmcloud.com/shared-resources-uat/pys/ibk/sendtemplate/template",
+    "mimes": [
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "application/vnd.ms-excel"
+    ],
+    "extensions": [
+        ".xlsx",
+        ".xls",
+        ".csv"
+    ],
+    "msjFormatocustomer": "nombre invalido, formato correcto: premia-carga_loadCustomer-MMYYYY",
+    "msjFormatocoupontemplate": "nombre invalido, formato correcto: couponTemplate_####_MMYYYY",
+    "msjFormatomovieticket": "nombre invalido, formato correcto: movieTicket_MMYYYY",
+    "msjValidarmes": "periodo invalido, cargar archivos solo hasta el mes de ",
+    "messageCard": "Se notificara el proceso de carga via mail, Archivo(s) enviado(s) ",
+    "regExpcustomer": "premia-carga_loadCustomer-(1[0-2]|0[1-9]|\\d)(?:(?:19|20)[0-9]{2})$",
+    "regExpcoupontemplate": "^couponTemplate_(\\d{4})_(1[0-2]|0[1-9]|\\d)(?:(?:19|20)[0-9]{2})$",
+    "regExpmovietickets": "^movieTicket_(1[0-2]|0[1-9]|\\d)(?:(?:19|20)[0-9]{2})$",
+    "cantidadMesesvalidos": 2,
+    "tamanoMaximoArchivo": 20
+}

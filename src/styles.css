@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "css/styles.css";
+
+.white-text {
+  color: #fff !important;
+}
+
+h2,h3,h5{
+  color: darkgrey;
+}
+.progress-spinner-full-height{
+  height: 80vh;
+}
+
+button:focus {
+  outline:0;
+}
+
+.cdk-overlay-pane.products-dialog{
+  position: relative!important;
+  margin-top: 3%;
+}
+
+.close-option{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+  cursor: pointer;
+}

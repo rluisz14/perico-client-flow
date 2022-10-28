@@ -1,0 +1,298 @@
+{
+    "id": "5ca634aee808301eb8a3ac3b",
+    "productId": "0117",
+    "profiles": [
+        {
+            "profileName": "DAP2",
+            "profileType": "N",
+            "coupons": [
+                "Super200",
+                "TXD200",
+                "REST200",
+                "2XTLC15MX30"
+            ]
+        },
+        {
+            "profileName": "DAP1",
+            "profileType": "N",
+            "coupons": [
+                "Super200",
+                "TXD200",
+                "REST200",
+                "2XTLC15MX30"
+            ]
+        },
+        {
+            "profileName": "NDAP2",
+            "profileType": "N",
+            "coupons": [
+                "ENT100",
+                "RYA100",
+                "REST100",
+                "2XTLC15MX20"
+            ]
+        },
+        {
+            "profileName": "NDAP1",
+            "profileType": "N",
+            "coupons": [
+                "ENT100",
+                "RYA100",
+                "REST100",
+                "2XTLC15MX20"
+            ]
+        },
+        {
+            "profileName": "CIP2",
+            "profileType": "N",
+            "coupons": [
+                "Super30",
+                "RYC30",
+                "TXD30",
+                "TLC15MX30"
+            ]
+        },
+        {
+            "profileName": "CIP1",
+            "profileType": "N",
+            "coupons": [
+                "Super30",
+                "RYC30",
+                "TXD30",
+                "TLC15MX30"
+            ]
+        }
+    ],
+    "coupons": [
+        {
+            "couponName": "2XTLC15MX30",
+            "nominal": false,
+            "amount": 15,
+            "redeemable": {
+                "category": 99999,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "99999"
+            },
+            "minimumTransactionAmount": 0,
+            "maximumDiscountAmount": 30,
+            "couponType": "N",
+            "quantity": 2,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "CED26B3EEADC6ADFFC98BBB6843304B29C21857E4BD6283E66955CA9DA0B92F7"
+        },
+        {
+            "couponName": "RYC30",
+            "nominal": true,
+            "amount": 30,
+            "redeemable": {
+                "category": 3,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "3"
+            },
+            "minimumTransactionAmount": 30,
+            "maximumDiscountAmount": 70,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "18661C86EF42F264B96B81266D1F0E44CF2E98EAB8B92B6BF77665868E739E85"
+        },
+        {
+            "couponName": "TXD30",
+            "nominal": true,
+            "amount": 30,
+            "redeemable": {
+                "category": 26,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "26"
+            },
+            "minimumTransactionAmount": 30,
+            "maximumDiscountAmount": 70,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "BC0359AC1DFF654B31EBF8CAB675C4A44A35D7AEAD3BDF44EB71548D570A180F"
+        },
+        {
+            "couponName": "ENT100",
+            "nominal": true,
+            "amount": 100,
+            "redeemable": {
+                "category": 10,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "10"
+            },
+            "minimumTransactionAmount": 40,
+            "maximumDiscountAmount": 100,
+            "couponType": "N",
+            "quantity": 2,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "51329C1EAC2B741F0101296BC1B69EDF33C05872DF8EB07A8612B5ADCC3D0C60"
+        },
+        {
+            "couponName": "RYA100",
+            "nominal": true,
+            "amount": 100,
+            "redeemable": {
+                "category": 25,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "25"
+            },
+            "minimumTransactionAmount": 40,
+            "maximumDiscountAmount": 100,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "04254174619B241D3468443559D9E1E366775336AB7A9345F15330FDE4A0E1BA"
+        },
+        {
+            "couponName": "2XTLC15MX20",
+            "nominal": false,
+            "amount": 15,
+            "redeemable": {
+                "category": 99999,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "99999"
+            },
+            "minimumTransactionAmount": 0,
+            "maximumDiscountAmount": 20,
+            "couponType": "N",
+            "quantity": 2,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "14AB1861BB368078F3CB2F7C9EB6B9D5BF7F8297122AE1BB0EE4B4B4BD35FD20"
+        },
+        {
+            "couponName": "REST100",
+            "nominal": true,
+            "amount": 100,
+            "redeemable": {
+                "category": 3,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "3"
+            },
+            "minimumTransactionAmount": 40,
+            "maximumDiscountAmount": 100,
+            "couponType": "N",
+            "quantity": 2,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "DF2E2D8138EA2B3C4E02335FFD8AC8A14CCE9C96A2FEA74E79F821885E8C952F"
+        },
+        {
+            "couponName": "Super200",
+            "nominal": true,
+            "amount": 200,
+            "redeemable": {
+                "category": 21,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "21"
+            },
+            "minimumTransactionAmount": 50,
+            "maximumDiscountAmount": 200,
+            "couponType": "N",
+            "quantity": 2,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "B7F56CBCCCE18467709E76FB5556FA4B6E4C0A96A41025946B5C36B7D7217A11"
+        },
+        {
+            "couponName": "REST200",
+            "nominal": true,
+            "amount": 200,
+            "redeemable": {
+                "category": 3,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "3"
+            },
+            "minimumTransactionAmount": 50,
+            "maximumDiscountAmount": 200,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "66845840EE4EB54AF46E63DE78F3DB8D629499D44CA8313472799E3C7FD3E116"
+        },
+        {
+            "couponName": "TXD200",
+            "nominal": true,
+            "amount": 200,
+            "redeemable": {
+                "category": 26,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "26"
+            },
+            "minimumTransactionAmount": 50,
+            "maximumDiscountAmount": 200,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "3674B950FDB307DFEFE929C03A93C1AFA62B98C94F6065D1D0307695A81F4384"
+        },
+        {
+            "couponName": "TLC15MX30",
+            "nominal": false,
+            "amount": 15,
+            "redeemable": {
+                "category": 99999,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "99999"
+            },
+            "minimumTransactionAmount": 0,
+            "maximumDiscountAmount": 30,
+            "couponType": "N",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "78ACB94412D874E29684DD82EDAB2601203BF1F32DAA43584311B05DFC32C0CB"
+        },
+        {
+            "couponName": "Super30",
+            "nominal": true,
+            "amount": 30,
+            "redeemable": {
+                "category": 28,
+                "commerce": null,
+                "stores": null,
+                "fullLocationIdentifier": "28"
+            },
+            "minimumTransactionAmount": 30,
+            "maximumDiscountAmount": 70,
+            "couponType": "R",
+            "quantity": 1,
+            "startDate": null,
+            "endDate": null,
+            "graceDays": null,
+            "futureCouponCheckSum": "8501A488B6FB9E0837B33440B8E8DE9E630FB271AC5CD47534BF7CB13291D688"
+        }
+    ],
+    "executionDate": "",
+    "active": false
+}

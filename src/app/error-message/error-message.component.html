@@ -1,0 +1,13 @@
+<h1 mat-dialog-title> Error {{!!data.errorOrigin? ':'+data.errorOrigin: ''}} </h1>
+<mat-dialog-content mat-dialog-content>
+  Por favor corriga lo siguiente:
+  <ul>
+    <li *ngFor="let error of data.errorMessages">
+      {{error}}
+    </li>
+  </ul>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Aceptar</button>
+  <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+</mat-dialog-actions>

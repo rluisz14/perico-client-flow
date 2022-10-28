@@ -1,0 +1,62 @@
+#OrdersSection{
+  position:fixed;
+  align-content: center;
+  text-align: center;
+  right:2.5%;
+  bottom:2.5%;
+}
+#ListOrders {
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-color: #000000;
+  margin-bottom: 3%;
+  border-radius: 12px;
+}
+#RedisButton {
+  background-color: #b3000e;
+  display: block;
+  margin-left: auto;
+}
+#RedisButton:hover {
+  background-color: #86000c;
+}
+#RedisIcon {
+  color: white;
+}
+
+#CompleteOrder {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#headStart {
+  margin-left: 10%;
+}
+#headEnd {
+  margin-left: 10%;
+}
+
+#OrderScroll{
+  max-height: 500px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 12px;
+}
+
+.mat-table
+{
+  width: 350px;
+  background-color:transparent!important;
+}
+
+tr.mat-footer-row {
+  background-color: #FFFFFF;
+  font-weight: bold;
+}
+
+.mat-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}

@@ -1,0 +1,20 @@
+<section class="portfolio" id="portfolioModal">
+  <div class="container">
+    <span class="close-option" (click)="onNoClick()"><mat-icon color="primary">cancel</mat-icon></span>
+    <div class="row justify-content-center my-3 text-center">
+        <h4 class="text-center text-black text-secondary mb-0">¿Qué te provoca hoy?</h4>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <!-- Portfolio Item 6-->
+      <div class="col-md-6 col-lg-4 mb-5 text-center" *ngFor="let product of products">
+        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="" (click)="registerOrder(product)">
+          <div class="portfolio-item-caption bg-black d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white"><i [textContent]="product['productName']"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="{{product['productImageUrl']}}" alt="..."/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
