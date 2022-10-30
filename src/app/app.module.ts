@@ -42,7 +42,6 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
 import { ChartsModule } from 'ng2-charts';
 import { AuthService } from './service/auth.service';
 import { GenericDialog } from './core/generic-dialog/generic-dialog';
-import {PreventDialogComponent} from './client-complete/prevent-dialog/prevent-dialog.component';
 // tslint:disable-next-line:max-line-length
 
 
@@ -59,8 +58,7 @@ import {PreventDialogComponent} from './client-complete/prevent-dialog/prevent-d
     ClientAboutComponent,
     ClientContactComponent,
     OrdersCategoryComponent,
-    ClientCompleteComponent,
-    PreventDialogComponent,
+    ClientCompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -99,8 +97,7 @@ import {PreventDialogComponent} from './client-complete/prevent-dialog/prevent-d
   entryComponents: [
     ErrorMessageComponent,
     GenericDialog,
-    OrdersCategoryComponent,
-    PreventDialogComponent
+    OrdersCategoryComponent
   ]
 })
 export class AppModule {

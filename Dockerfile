@@ -12,7 +12,7 @@ RUN npm install --scripts-prepend-node-path=auto
 
 COPY . /usr/src/app
 
-RUN npm run build-uat --scripts-prepend-node-path=auto
+RUN npm run build-prod --scripts-prepend-node-path=auto
 
 # Stage 2
 FROM nginx:1.21.0-alpine

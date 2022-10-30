@@ -38,16 +38,6 @@ export class AppComponent implements OnInit {
     environment.url = config['url'];
     environment.mimes = config['mimes'];
     environment.extensions = config['extensions'];
-    environment.msjFormatocustomer = config['msjFormatocustomer'];
-    environment.msjFormatocoupontemplate = config['msjFormatocoupontemplate'];
-    environment.msjFormatomovieticket = config['msjFormatomovieticket'];
-    environment.msjValidarmes = config['msjValidarmes'];
-    environment.messageCard = config['messageCard'];
-    environment.regExpcustomer = config['regExpcustomer'];
-    environment.regExpcoupontemplate = config['regExpcoupontemplate'];
-    environment.regExpmovietickets = config['regExpmovietickets'];
-    environment.cantidadMesesvalidos = config['cantidadMesesvalidos'];
-    environment.tamanoMaximoArchivo = config['tamanoMaximoArchivo'];
   }
 
 
