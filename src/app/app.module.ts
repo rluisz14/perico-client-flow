@@ -18,6 +18,7 @@ import { ClientContactComponent } from './client-contact/client-contact.componen
 import {ClientAboutComponent} from './client-about/client-about.component';
 import {OrdersCategoryComponent} from './client-orders/orders-category/orders-category.component';
 import {ClientCompleteComponent} from './client-complete/client-complete.component';
+import {LoginComponent} from './intranet/Login/login.component';
 import {
   MatGridListModule,
   MatAutocompleteModule,
@@ -33,7 +34,7 @@ import {
   MatDialogModule,
   MatToolbarModule,
   MatButtonToggleModule, MatPaginatorModule, MatSortModule, MatTableModule,
-  MatTooltipModule,
+  MatTooltipModule, MatSidenavModule
 } from '@angular/material';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { ConfirmOrderGuard} from './guards/confirm-order.guard';
@@ -42,6 +43,8 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
 import { ChartsModule } from 'ng2-charts';
 import { AuthService } from './service/auth.service';
 import { GenericDialog } from './core/generic-dialog/generic-dialog';
+import {IntranetGuard} from './guards/intranet.guard';
+import {ClientGuard} from './guards/client.guard';
 // tslint:disable-next-line:max-line-length
 
 
@@ -58,7 +61,8 @@ import { GenericDialog } from './core/generic-dialog/generic-dialog';
     ClientAboutComponent,
     ClientContactComponent,
     OrdersCategoryComponent,
-    ClientCompleteComponent
+    ClientCompleteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -91,8 +95,9 @@ import { GenericDialog } from './core/generic-dialog/generic-dialog';
     MatTableModule,
     BrowserAnimationsModule,
     MatTooltipModule,
+    MatSidenavModule,
   ],
-  providers: [ConfirmOrderGuard, NavigateOrderGuard, AuthService],
+  providers: [ConfirmOrderGuard, NavigateOrderGuard, AuthService, ClientGuard, IntranetGuard],
   bootstrap: [AppComponent],
   entryComponents: [
     ErrorMessageComponent,

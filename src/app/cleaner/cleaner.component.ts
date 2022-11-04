@@ -94,12 +94,20 @@ export class CleanerComponent implements OnInit {
     this.router.navigate(['client-complete']).then(r => {});
   }
 
+  isNotIntranet() {
+    return !localStorage.getItem('isIntranet');
+  }
+
   isVisible() {
-    if (!localStorage.getItem('confirmOrder')) {
-      this.orderList = UtilModule.orderList;
-      this.refresh();
-      this.dataSource._updateChangeSubscription();
-      return true;
+    if (this.isNotIntranet()) {
+      if (!localStorage.getItem('confirmOrder')) {
+        this.orderList = UtilModule.orderList;
+        this.refresh();
+        this.dataSource._updateChangeSubscription();
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }

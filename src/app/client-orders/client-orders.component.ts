@@ -44,7 +44,7 @@ export class ClientOrdersComponent implements OnInit {
     });
     console.log(data['products']);
     this.dialog.open(OrdersCategoryComponent, {
-      width: '45%',
+      width: '50%',
       height: '74%',
       panelClass: 'products-dialog',
       data: data,

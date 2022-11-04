@@ -1,0 +1,39 @@
+<div class="green-body">
+  <div class="container">
+    <div class="row justify-content-center">
+      <mat-card class="col-6 mt-md-3" style="background-color: #f9fafb">
+        <form [formGroup]="initialFormGroup">
+          <div class="col-12 mt-md-5 white-text text-center">
+            <h1 class="text-black">-- INTRANET --</h1>
+          </div>
+          <mat-card-content class="text-center">
+            <mat-form-field class="col-10">
+              <input matInput oninput="this.value = this.value.toUpperCase()" placeholder="Usuario" formControlName="usernameCtrl" [readonly]="isLoading">
+              <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('usernameCtrl')}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="col-10">
+              <input matInput type="password" placeholder="Contraseña" formControlName="passwordCtrl" [readonly]="isLoading">
+              <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('passwordCtrl')}}</mat-error>
+            </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="container">
+              <div class="row justify-content-center">
+                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #997404"
+                        (click)="goHome()">Regresar
+                </button>
+                <div class="col-1"></div>
+                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #000000"
+                  (click)="login()">INGRESAR
+                </button>
+                <button *ngIf="isLoading" class="col-11 white-text px-2" mat-flat-button color="accent">Espera...
+                </button>
+              </div>
+
+            </div>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -8,8 +8,14 @@ import { Router } from '@angular/router';
 })
 export class ClientNavigateComponent implements OnInit {
   constructor(private router: Router) { }
+  isIntranet: boolean;
+  isCollapsed = false;
 
   ngOnInit() {
+  }
+
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
   goToHome() {
@@ -26,5 +32,16 @@ export class ClientNavigateComponent implements OnInit {
 
   goToContact() {
     this.router.navigate(['client-contact']);
+  }
+
+  isNotIntranet() {
+    return !localStorage.getItem('isIntranet');
+  }
+
+  goToIntranet() {
+    if (!localStorage.getItem('confirmOrder')) {
+      localStorage.setItem('isIntranet', 'true');
+      this.router.navigate(['app-login']);
+    }
   }
 }

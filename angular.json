@@ -27,7 +27,8 @@
               "src/custom_theme.scss",
               "src/assets/fonts/fonts.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "dev": {

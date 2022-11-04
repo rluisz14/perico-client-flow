@@ -15,79 +15,92 @@
         <div class="col-lg-6 col-xl-6">
           <!-- Name input-->
           <div class="form-floating">
-            <input class="form-control" formControlName="NameCtrl" id="name" type="text"
-                   placeholder="Enter your name..."
-                   data-sb-validations="required"/>
-            <label for="name">Nombre Completo</label>
-            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+            <mat-form-field appearance="fill">
+              <mat-label>Nombre Completo</mat-label>
+              <input matInput class="form-control" formControlName="NameCtrl" id="name" type="text" placeholder="Ingresa tu nombre..." data-sb-validations="required"/>
+              <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+            </mat-form-field>
           </div>
           <!-- Email address input-->
           <div class="form-floating">
-            <input class="form-control" formControlName="EmailCtrl" id="email" type="email"
-                   placeholder="name@example.com"
-                   data-sb-validations="required,email"/>
-            <label for="email">Correo electrónico</label>
-            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            <mat-form-field appearance="fill">
+              <mat-label>Correo electrónico</mat-label>
+              <input matInput class="form-control" formControlName="EmailCtrl" id="email" type="email"
+                     placeholder="name@example.com"
+                     data-sb-validations="required,email"/>
+              <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+              <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            </mat-form-field>
           </div>
           <!-- Phone number input-->
           <div class="row g-2" style="margin-bottom: 3px">
-            <div class="col-md-2" style="margin-top: 9px">
+            <div class="col-md-3" style="margin-top: 9px">
               <div class="form-floating">
-                <select class="form-select" formControlName="DTypeCtrl" id="documentType">
-                  <option selected value="1">DNI</option>
-                </select>
-                <label for="documentType">Tipo</label>
-                <div class="invalid-feedback" data-sb-feedback="documentType:required">A document type is required.
-                </div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tipo</mat-label>
+                  <mat-select class="form-select" formControlName="DTypeCtrl" id="documentType">
+                    <mat-option value="1">DNI</mat-option>
+                  </mat-select>
+                  <div class="invalid-feedback" data-sb-feedback="documentType:required">A document type is required.</div>
+                </mat-form-field>
               </div>
             </div>
             <div class="col-md-5">
               <div class="form-floating">
-                <input class="form-control" formControlName="DocumentCtrl" id="document" type="tel"
-                       placeholder="45678945"
-                       data-sb-validations="required"/>
-                <label for="phone">Número de documento</label>
-                <div class="invalid-feedback" data-sb-feedback="document:required">A document number is required.</div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Num. Documento</mat-label>
+                  <input matInput class="form-control" formControlName="DocumentCtrl" id="document" type="tel"
+                         placeholder="45678945"
+                         data-sb-validations="required"/>
+                  <div class="invalid-feedback" data-sb-feedback="document:required">A document number is required.</div>
+                </mat-form-field>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
               <div class="form-floating">
-                <input class="form-control" formControlName="PhoneCtrl" id="phone" type="tel"
-                       placeholder="(123) 456-7890"
-                       data-sb-validations="required"/>
-                <label for="phone">Número de teléfono</label>
-                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Num. Telefono</mat-label>
+                  <input matInput class="form-control" formControlName="PhoneCtrl" id="phone" type="tel"
+                         placeholder="(01) 456-7890"
+                         data-sb-validations="required"/>
+                  <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                </mat-form-field>
               </div>
             </div>
           </div>
           <!-- Name input-->
           <div class="form-floating">
-            <select class="form-select" formControlName="PMethodCtrl" id="paymentMethod">
-              <option selected>Selecciona un método de pago</option>
-              <option value="1">TARJETA DEBITO / CRÉDITO</option>
-              <option value="2">PLIN</option>
-              <option value="3">YAPE</option>
-              <option value="4">EFECTIVO</option>
-            </select>
-            <label for="paymentMethod">Método de pago</label>
-            <div class="invalid-feedback" data-sb-feedback="paymentMethod:required">An email is required.</div>
+            <mat-form-field appearance="fill">
+              <mat-label>Método de pago</mat-label>
+              <mat-select class="form-select" formControlName="PMethodCtrl" id="paymentMethod">
+                <mat-option label="Selecciona un método de pago"></mat-option>
+                <mat-option value="1">TARJETA DEBITO / CRÉDITO</mat-option>
+                <mat-option value="2">PLIN</mat-option>
+                <mat-option value="3">YAPE</mat-option>
+                <mat-option value="4">EFECTIVO</mat-option>
+              </mat-select>
+              <div class="invalid-feedback" data-sb-feedback="paymentMethod:required">A payment method is required.</div>
+            </mat-form-field>
           </div>
           <!-- Name input-->
           <div class="form-floating">
-            <input class="form-control" formControlName="AddressCtrl" id="address" type="text"
-                   placeholder="Enter your name..."
-                   data-sb-validations="required"/>
-            <label for="address">Dirección</label>
-            <div class="invalid-feedback" data-sb-feedback="address:required">A name is required.</div>
+            <mat-form-field appearance="fill">
+              <mat-label>Dirección</mat-label>
+              <input matInput class="form-control" formControlName="AddressCtrl" id="address" type="text"
+                     placeholder="Enter your address..."
+                     data-sb-validations="required"/>
+              <div class="invalid-feedback" data-sb-feedback="address:required">A direction is required.</div>
+            </mat-form-field>
           </div>
           <!-- Message input-->
           <div class="form-floating">
-            <textarea class="form-control" formControlName="ADescriptCtrl" id="addressDescription" type="text"
-                      placeholder="Enter your message here..."
-                      style="height: 10rem" data-sb-validations="required"></textarea>
-            <label for="addressDescription">Referencia</label>
-            <div class="invalid-feedback" data-sb-feedback="addressDescription:required">A message is required.</div>
+            <mat-form-field appearance="fill">
+              <mat-label>Referencia</mat-label>
+              <textarea matInput class="form-control" formControlName="ADescriptCtrl" id="addressDescription" type="text"
+                        placeholder="Enter your message here..."
+                        style="height: 10rem" data-sb-validations="required"></textarea>
+              <div class="invalid-feedback" data-sb-feedback="addressDescription:required">A direction description is required.</div>
+            </mat-form-field>
           </div>
           <!-- Submit success message-->
           <!---->

@@ -1,0 +1,12 @@
+html, body {
+  height: 100% !important;
+  min-height: 100%;
+}
+
+.green-body {
+  background-color: #FFFFFF;
+  background-image: url('../../../assets/img/restobar.png');
+  background-repeat: repeat;
+  background-size: 25%;
+  height: 100vh;
+}

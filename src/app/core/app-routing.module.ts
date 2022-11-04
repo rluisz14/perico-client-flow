@@ -8,13 +8,17 @@ import {ClientAboutComponent} from '../client-about/client-about.component';
 import {ClientCompleteComponent} from '../client-complete/client-complete.component';
 import {ConfirmOrderGuard} from '../guards/confirm-order.guard';
 import {NavigateOrderGuard} from '../guards/navigate-order.guard';
+import {LoginComponent} from '../intranet/Login/login.component';
+import {IntranetGuard} from '../guards/intranet.guard';
+import {ClientGuard} from '../guards/client.guard';
 
 const routes: Routes = [
-  { path: '', component: ClientContentComponent, canActivate: [NavigateOrderGuard]},
-  { path: 'client-orders', component: ClientOrdersComponent, canActivate: [NavigateOrderGuard]},
-  { path: 'client-about', component: ClientAboutComponent, canActivate: [NavigateOrderGuard]},
-  { path: 'client-contact', component: ClientContactComponent, canActivate: [NavigateOrderGuard]},
-  { path: 'client-complete', component: ClientCompleteComponent, canActivate: [ConfirmOrderGuard]},
+  { path: '', component: ClientContentComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
+  { path: 'client-orders', component: ClientOrdersComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
+  { path: 'client-about', component: ClientAboutComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
+  { path: 'client-contact', component: ClientContactComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
+  { path: 'client-complete', component: ClientCompleteComponent, canActivate: [ClientGuard, ConfirmOrderGuard]},
+  { path: 'app-login', component: LoginComponent, canActivate: [NavigateOrderGuard, IntranetGuard]},
 ];
 
 @NgModule({

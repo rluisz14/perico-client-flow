@@ -7,13 +7,9 @@ html, body {
   margin-top: 3%;
 }
 
-/*/deep/ .fixed-top {
-  position: unset !important;
+.mat-form-field {
+  display: block;
 }
-
-/deep/ #OrdersSection {
-  visibility: hidden !important;
-}*/
 
 #OrderScroll {
   margin: 0px 50px 50px 50px;
