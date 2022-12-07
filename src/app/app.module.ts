@@ -6,19 +6,8 @@ import { FiledropModule } from './core/ngx-file-drop.module';
 import { AngularfileModule } from './core/angular-file.module';
 import { AppRoutingModule } from './core/app-routing.module';
 import { AppComponent } from './app.component';
-import { ClientNavigateComponent} from './client-navigate/client-navigate.component';
-import {ClientFooterComponent} from './client-footer/client-footer.component';
-import {CleanerComponent} from './cleaner/cleaner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-// tslint:disable-next-line:max-line-length
-import { ClientContentComponent } from './client-content/client-content.component';
-import { ClientOrdersComponent } from './client-orders/client-orders.component';
-import { ClientContactComponent } from './client-contact/client-contact.component';
-import {ClientAboutComponent} from './client-about/client-about.component';
-import {OrdersCategoryComponent} from './client-orders/orders-category/orders-category.component';
-import {ClientCompleteComponent} from './client-complete/client-complete.component';
-import {LoginComponent} from './intranet/Login/login.component';
 import {
   MatGridListModule,
   MatAutocompleteModule,
@@ -45,6 +34,22 @@ import { AuthService } from './service/auth.service';
 import { GenericDialog } from './core/generic-dialog/generic-dialog';
 import {IntranetGuard} from './guards/intranet.guard';
 import {ClientGuard} from './guards/client.guard';
+import { ClientNavigateComponent} from './client-navigate/client-navigate.component';
+import {ClientFooterComponent} from './client-footer/client-footer.component';
+import {CleanerComponent} from './cleaner/cleaner.component';
+import { ClientContentComponent } from './client-content/client-content.component';
+import { ClientOrdersComponent } from './client-orders/client-orders.component';
+import { ClientContactComponent } from './client-contact/client-contact.component';
+import {ClientAboutComponent} from './client-about/client-about.component';
+import {OrdersCategoryComponent} from './client-orders/orders-category/orders-category.component';
+import {ClientCompleteComponent} from './client-complete/client-complete.component';
+import {LoginComponent} from './intranet/Login/login.component';
+import {NavigationComponent} from './intranet/navigation/navigation.component';
+import {AdminComponent} from './intranet/admin/admin.component';
+import {SideNavigationComponent} from './intranet/side-navigation/side-navigation.component';
+import {DashboardComponent} from './intranet/dashboard/dashboard.component';
+import {LoggedGuard} from './guards/logged.guard';
+
 // tslint:disable-next-line:max-line-length
 
 
@@ -62,7 +67,11 @@ import {ClientGuard} from './guards/client.guard';
     ClientContactComponent,
     OrdersCategoryComponent,
     ClientCompleteComponent,
-    LoginComponent
+    LoginComponent,
+    NavigationComponent,
+    SideNavigationComponent,
+    DashboardComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +106,7 @@ import {ClientGuard} from './guards/client.guard';
     MatTooltipModule,
     MatSidenavModule,
   ],
-  providers: [ConfirmOrderGuard, NavigateOrderGuard, AuthService, ClientGuard, IntranetGuard],
+  providers: [ConfirmOrderGuard, NavigateOrderGuard, AuthService, ClientGuard, IntranetGuard, LoggedGuard],
   bootstrap: [AppComponent],
   entryComponents: [
     ErrorMessageComponent,

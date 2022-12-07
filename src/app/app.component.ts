@@ -9,7 +9,7 @@ import {environment} from 'src/environments/environment.prod';
 })
 export class AppComponent implements OnInit {
   title = 'pericoClientFlow';
-  appConfigPath = '../assets/appConfig.json';  // "../../../../config/appConfig.json";
+  appConfigPath = '../assets/appConfig.json';
 
   constructor(private http: HttpClient) {
   }

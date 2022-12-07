@@ -38,6 +38,13 @@ export class LoginComponent implements OnInit {
       'password': this.initialFormGroup.get('passwordCtrl').value
     };
     this.isLoading = true;
+
+    localStorage.setItem('userLogged', loginCredentials.username.toString().toUpperCase());
+
+    if (loginCredentials.username.toString().toLowerCase() === 'admin' && loginCredentials.password.toString().toLowerCase() === 'admin') {
+      localStorage.setItem('isLogged', 'true');
+      this.router.navigate(['app-admin']).then(r => {});
+    }
   }
 
   getErrorMessage(fieldName: string): string {

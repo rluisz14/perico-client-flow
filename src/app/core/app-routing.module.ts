@@ -11,6 +11,8 @@ import {NavigateOrderGuard} from '../guards/navigate-order.guard';
 import {LoginComponent} from '../intranet/Login/login.component';
 import {IntranetGuard} from '../guards/intranet.guard';
 import {ClientGuard} from '../guards/client.guard';
+import {AdminComponent} from '../intranet/admin/admin.component';
+import {LoggedGuard} from '../guards/logged.guard';
 
 const routes: Routes = [
   { path: '', component: ClientContentComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: 'client-contact', component: ClientContactComponent, canActivate: [ClientGuard, NavigateOrderGuard]},
   { path: 'client-complete', component: ClientCompleteComponent, canActivate: [ClientGuard, ConfirmOrderGuard]},
   { path: 'app-login', component: LoginComponent, canActivate: [NavigateOrderGuard, IntranetGuard]},
+  { path: 'app-admin', component: AdminComponent, canActivate: [NavigateOrderGuard, IntranetGuard, LoggedGuard]},
 ];
 
 @NgModule({

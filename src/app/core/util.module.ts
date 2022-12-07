@@ -9,6 +9,11 @@ import {GenericDialog} from './generic-dialog/generic-dialog';
 
 export class UtilModule {
   static orderList: Array<Orders> = [];
+  static sideNavBar = true;
+  static isAdminOpen = true;
+  static isOrdersOpen = false;
+  static isKitchenOpen = false;
+  static isStoreOpen = false;
 
   constructor() {
   }
@@ -35,5 +40,36 @@ export class UtilModule {
     dialogRef.afterClosed().subscribe(result => {
       return;
     });
+  }
+
+  static toggleSideNavBar() {
+    this.sideNavBar = this.sideNavBar !== true;
+  }
+
+  static getSideNavBar(): boolean {
+    return this.sideNavBar;
+  }
+
+  static openCloseOrders() {
+    this.closeAll();
+    this.isOrdersOpen = this.isOrdersOpen !== true;
+  }
+  static openCloseKitchen() {
+    this.closeAll();
+    this.isKitchenOpen = this.isKitchenOpen !== true;
+  }
+  static openCloseStore() {
+    this.closeAll();
+    this.isStoreOpen = this.isStoreOpen !== true;
+  }
+  static goBack() {
+    this.closeAll();
+    this.isAdminOpen = this.isAdminOpen !== true;
+  }
+  static closeAll() {
+    this.isAdminOpen = false;
+    this.isOrdersOpen = false;
+    this.isKitchenOpen = false;
+    this.isStoreOpen = false;
   }
 }

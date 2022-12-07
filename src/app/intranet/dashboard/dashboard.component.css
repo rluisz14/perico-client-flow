@@ -1,0 +1,56 @@
+html, body {
+  height: 100% !important;
+  min-height: 100%;
+}
+
+#tools{
+  margin: auto;
+  width: 600px;
+  height: 100%;
+  text-align: center;
+  padding: 150px 0;
+}
+
+#toolsTitle{
+  display: block;
+  height: 20%;
+}
+
+#adminTools {
+  width: 100%;
+  height: 80%;
+}
+
+#buttonTool1, #buttonTool2, #buttonTool3, #buttonTool4 {
+  margin: auto;
+  display: inline-block;
+  width: 25%;
+  height: 70%;
+  border-style: outset;
+}
+
+#spanButtonTool1, #spanButtonTool2, #spanButtonTool3, #spanButtonTool4{
+  display: block;
+  margin-top: 40%;
+}
+
+#buttonTool1:hover, #buttonTool2:hover, #buttonTool3:hover, #buttonTool4:hover {
+  background-color: #8ddece;
+  cursor: pointer;
+}
+
+#Orders, #Kitchen, #Store {
+  margin: auto;
+  width: 800px;
+  height: 100%;
+  padding: 100px 0;
+}
+
+#OrdersOverflow, #KitchenOverflow, #StoreOverflow {
+  height: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}

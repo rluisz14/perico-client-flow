@@ -2,6 +2,7 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "css/styles.css";
+@import "css/styles-admin.css";
 
 .white-text {
   color: #fff !important;

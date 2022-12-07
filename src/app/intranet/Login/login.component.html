@@ -19,17 +19,16 @@
           <mat-card-actions>
             <div class="container">
               <div class="row justify-content-center">
-                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #997404"
-                        (click)="goHome()">Regresar
+                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #000000"
+                        (click)="login()">INGRESAR
                 </button>
                 <div class="col-1"></div>
-                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #000000"
-                  (click)="login()">INGRESAR
+                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #997404"
+                        (click)="goHome()">Regresar
                 </button>
                 <button *ngIf="isLoading" class="col-11 white-text px-2" mat-flat-button color="accent">Espera...
                 </button>
               </div>
-
             </div>
           </mat-card-actions>
         </form>
