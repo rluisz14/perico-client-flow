@@ -12,5 +12,9 @@ export const environment = {
   'OrdersCategoryURL': 'http://34.27.160.80:8080/perico/v1/backend/orders/categories',
   'CategoryProductsURL': 'http://34.27.160.80:8080/perico/v1/backend/orders/products?categoryId={categoryId}',
   'PriceDetailsURL': 'http://34.27.160.80:8080/perico/v1/backend/priceDetails',
-  'RegisterOrderURL': 'http://34.27.160.80:8080/perico/v1/backend/orders'
+  'RegisterOrderURL': 'http://34.27.160.80:8080/perico/v1/backend/orders',
+  'RegisterNewClientURL': 'http://34.27.160.80:8080/perico/v1/backend/persons',
+  'LoginURL': 'http://34.27.160.80:8080/perico/v1/backend/users/login',
+  'OrderDetailsURL': 'http://34.27.160.80:8080/perico/v1/backend/orders',
+  'ProductSuppliesURL': 'http://34.27.160.80:8080/perico/v1/backend/orders/product-details',
 };
