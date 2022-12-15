@@ -54,3 +54,25 @@ html, body {
 table {
   width: 100%;
 }
+
+th.mat-header-cell{
+  text-align: center !important;
+}
+
+.mat-cell {
+  text-align: center;
+}
+
+@media (max-width: 525px){
+  #tools{
+    width: 500px;
+  }
+
+  #Orders, #Kitchen, #Store {
+    width: 500px;
+  }
+
+  .mat-cell {
+    font-size: 10px;
+  }
+}

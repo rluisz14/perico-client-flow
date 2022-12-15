@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row justify-content-center my-3 text-center">
+    <span class="close-option" (click)="onNoClick()"><mat-icon color="primary">cancel</mat-icon></span>
+    <div class="col-4 mt-md-5 black-text" id="RegisterOption">
+      <h4 class="app-title">{{getTitleMessage()}}</h4>
+    </div>
+  </div>
+  <div class="row justify-content-center my-3 text-center">
+    <mat-card class="col-12 mt-md-3">
+      <form [formGroup]="initialFormGroup">
+        <mat-card-content>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Nombre Completo" maxlength="30" formControlName="FullNameClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('FullNameClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Email" maxlength="30" formControlName="EmailClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('EmailClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Numero de Documento" maxlength="30" formControlName="DocumentNumberClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('DocumentNumberClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Numero de teléfono" maxlength="30" formControlName="PhoneNumberClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('PhoneNumberClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Dirección" maxlength="30" formControlName="AddressClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('AddressClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Referencia" maxlength="30" formControlName="AddressReferenceClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('AddressReferenceClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Fecha de Nacimiento" maxlength="30" formControlName="BirthdateClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('BirthdateClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Usuario" maxlength="30" formControlName="UsernameClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('UsernameClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput type="password" placeholder="Password" maxlength="30" formControlName="PasswordClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('PasswordClientCtrl')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <input matInput type="password" placeholder="Confirm Password" maxlength="30" formControlName="ConfirmPasswordClientCtrl">
+            <mat-error *ngIf="initialFormGroup.invalid">{{getErrorMessage('ConfirmPasswordClientCtrl')}}</mat-error>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="container">
+            <div class="row justify-content-center">
+              <button *ngIf="!isLoading" class="col-11 white-text px-2" mat-flat-button color="accent"
+                      (click)="updateOrRegister()">{{getOperationMessage()}}
+              </button>
+              <button *ngIf="isLoading" class="col-11 white-text px-2" mat-flat-button color="accent">Espera...
+              </button>
+            </div>
+          </div>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>

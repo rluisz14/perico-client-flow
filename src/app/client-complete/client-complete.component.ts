@@ -10,6 +10,9 @@ import {PriceDetails} from './Model/PriceDetails';
 import {OrderRequest} from './Model/OrderRequest';
 import {OrderDetailsRequest} from './Model/OrderDetailsResquest';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {NewClientOperation} from './Model/NewClientOperation';
+import {NewClientComponent} from './new-client/new-client.component';
+import {Client} from './new-client/Model/Client';
 
 @Component({
   selector: 'app-client-complete',
@@ -90,12 +93,15 @@ export class ClientCompleteComponent implements OnInit {
       return;
     }
     if (window.confirm('¿Desea confirmar su pedido?')) {
-      localStorage.removeItem('confirmOrder');
-      this.registerOrderData().then(r => r);
-      UtilModule.cleanOrdersItems();
-      this.router.navigate(['']).then(r => {
+      this.registerOrderData().then(res => {
+        this.stepsConfirmOrder();
+      }).catch(e => {
+        if (e.status === 401) {
+          this.newRegister();
+        } else {
+          UtilModule.openGenericDialog('Ocurrio un error, vuelva intentar en unos minutos', this.dialog);
+        }
       });
-      UtilModule.openGenericDialog('Gracias por preferir RestoBar Perico, pronto nos contactaremos con usted', this.dialog);
     }
   }
 
@@ -114,17 +120,50 @@ export class ClientCompleteComponent implements OnInit {
 
   formErrors() {
     return 'NameCtrl: ' + this.getErrorMessage('NameCtrl') + ' | \n' +
-      'EmailCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'DTypeCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'DocumentCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'PhoneCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'PMethodCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'AddressCtrl: ' + this.getErrorMessage('NameCtrl') + ' | ' +
-      'ADescriptCtrl: ' + this.getErrorMessage('EmailCtrl');
+      'EmailCtrl: ' + this.getErrorMessage('EmailCtrl') + ' | ' +
+      'DTypeCtrl: ' + this.getErrorMessage('DTypeCtrl') + ' | ' +
+      'DocumentCtrl: ' + this.getErrorMessage('DocumentCtrl') + ' | ' +
+      'PhoneCtrl: ' + this.getErrorMessage('PhoneCtrl') + ' | ' +
+      'PMethodCtrl: ' + this.getErrorMessage('PMethodCtrl') + ' | ' +
+      'AddressCtrl: ' + this.getErrorMessage('AddressCtrl') + ' | ' +
+      'ADescriptCtrl: ' + this.getErrorMessage('ADescriptCtrl');
   }
 
   getErrorMessage(fieldName: string): string {
     const formGroup = this.initialFormGroup.get(fieldName) as FormGroup;
     return formGroup.hasError('required') ? 'Requerido' : 'OK';
+  }
+
+  newRegister() {
+    const newClientOperation = new NewClientOperation();
+    newClientOperation['title'] = 'Completa tus datos';
+    newClientOperation['attempt'] = 'some';
+    newClientOperation['client'] = this.getClientFromForms();
+    this.dialog.open(NewClientComponent, {
+      width: '500px',
+      data: newClientOperation,
+      panelClass: 'new-client-dialog',
+      disableClose: false
+    }).afterClosed().subscribe(() => {
+      this.stepsConfirmOrder();
+    });
+  }
+
+  getClientFromForms(): Client {
+    const client = new Client();
+    client['name'] = this.initialFormGroup.get('NameCtrl').value;
+    client['email'] = this.initialFormGroup.get('EmailCtrl').value;
+    client['documentNumber'] = this.initialFormGroup.get('DocumentCtrl').value;
+    client['phoneNumber'] = this.initialFormGroup.get('PhoneCtrl').value;
+    client['address'] = this.initialFormGroup.get('AddressCtrl').value;
+    client['addressReference'] = this.initialFormGroup.get('ADescriptCtrl').value;
+    return client;
+  }
+
+  stepsConfirmOrder() {
+    localStorage.removeItem('confirmOrder');
+    UtilModule.cleanOrdersItems();
+    this.router.navigate(['']).then(r => {});
+    UtilModule.openGenericDialog('Gracias por preferir RestoBar Perico, pronto nos contactaremos con usted', this.dialog);
   }
 }

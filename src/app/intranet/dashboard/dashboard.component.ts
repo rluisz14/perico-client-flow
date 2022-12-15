@@ -2,6 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 import {UtilModule} from '../../core/util.module';
+import {OrderResponse} from './Model/OrderResponse';
+import {AdministrarOrdersDetailsService} from '../../service/orders-details.service';
+import {MatDialog, MatTableDataSource} from '@angular/material';
+import {OrderDetailsOperation} from './order-details/Model/OrderDetailsOperation';
+import {OrderDetailsResponse} from './Model/OrderDetailsResponse';
+import {OrderDetailsComponent} from './order-details/order-details.component';
+import {OrderProductsComponent} from './order-products/order-products.component';
 
 export interface PeriodicElement {
   name: string;
@@ -42,13 +49,59 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class DashboardComponent implements OnInit {
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  displayedOrderDetailsColumns = ['orderId', 'clientDocumentNumber', 'clientName', 'orderDate', 'orderStatus', 'total', 'details'];
+  displayedKitchenColumns = ['orderId', 'clientName', 'orderStatus', 'details'];
   dataSource = ELEMENT_DATA;
+  dataSourceOrders: MatTableDataSource<OrderResponse> = new MatTableDataSource<OrderResponse>();
+  dataSourceKitchen: MatTableDataSource<OrderResponse> = new MatTableDataSource<OrderResponse>();
 
   constructor(private _formBuilder: FormBuilder,
+              public dialog: MatDialog,
+              private orderDetailService: AdministrarOrdersDetailsService,
               private router: Router) {
   }
 
   ngOnInit() {
+    this.populateOrderDetails().then(r => {});
+    this.populateOrderKitchen().then(r => {});
+  }
+
+  async populateOrderDetails() {
+    await this.orderDetailService.readOrdersDetailsData().then((response => {
+      this.dataSourceOrders = new MatTableDataSource(response);
+    }));
+  }
+
+  async populateOrderKitchen() {
+    await this.orderDetailService.readOrdersKitchenData().then((response => {
+      this.dataSourceKitchen = new MatTableDataSource(response);
+    }));
+  }
+
+  goToDetail(orderDetails: OrderDetailsResponse[]) {
+    const orderDetailsOperation = new OrderDetailsOperation();
+    orderDetailsOperation['title'] = 'Detalles del Pedido';
+    orderDetailsOperation['orderDetails'] = orderDetails;
+    this.dialog.open(OrderDetailsComponent, {
+      width: '450px',
+      data: orderDetailsOperation,
+      panelClass: 'order-details-dialog',
+      disableClose: false
+    }).afterClosed().subscribe(() => {
+    });
+  }
+
+  goToOrderProducts(orderDetails: OrderDetailsResponse[]) {
+    const orderDetailsOperation = new OrderDetailsOperation();
+    orderDetailsOperation['title'] = 'Detalles del Pedido';
+    orderDetailsOperation['orderDetails'] = orderDetails;
+    this.dialog.open(OrderProductsComponent, {
+      width: '450px',
+      data: orderDetailsOperation,
+      panelClass: 'order-products-dialog',
+      disableClose: false
+    }).afterClosed().subscribe(() => {
+    });
   }
 
   goIntranet() {

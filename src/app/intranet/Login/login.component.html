@@ -4,7 +4,7 @@
       <mat-card class="col-6 mt-md-3" style="background-color: #f9fafb">
         <form [formGroup]="initialFormGroup">
           <div class="col-12 mt-md-5 white-text text-center">
-            <h1 class="text-black">-- INTRANET --</h1>
+            <h1 class="text-black">Mi Cuenta</h1>
           </div>
           <mat-card-content class="text-center">
             <mat-form-field class="col-10">
@@ -27,6 +27,14 @@
                         (click)="goHome()">Regresar
                 </button>
                 <button *ngIf="isLoading" class="col-11 white-text px-2" mat-flat-button color="accent">Espera...
+                </button>
+              </div>
+              <div class="row">
+                <div class="col-sm-12" style="height: 10px"></div>
+              </div>
+              <div class="row justify-content-center">
+                <button *ngIf="!isLoading" class="col-4 white-text px-2" mat-flat-button style="background-color: #16a085"
+                        (click)="newRegister()">Crear Nueva Cuenta
                 </button>
               </div>
             </div>

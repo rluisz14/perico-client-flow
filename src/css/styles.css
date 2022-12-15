@@ -11507,3 +11507,7 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.cdk-overlay-container {
+  z-index: 10000 !important;
+}

@@ -16,7 +16,11 @@ export const environment = {
   'OrdersCategoryURL': 'http://localhost:8080/perico/v1/backend/orders/categories',
   'CategoryProductsURL': 'http://localhost:8080/perico/v1/backend/orders/products?categoryId={categoryId}',
   'PriceDetailsURL': 'http://localhost:8080/perico/v1/backend/priceDetails',
-  'RegisterOrderURL': 'http://localhost:8080/perico/v1/backend/orders'
+  'RegisterOrderURL': 'http://localhost:8080/perico/v1/backend/orders',
+  'RegisterNewClientURL': 'http://localhost:8080/perico/v1/backend/persons',
+  'LoginURL': 'http://localhost:8080/perico/v1/backend/users/login',
+  'OrderDetailsURL': 'http://localhost:8080/perico/v1/backend/orders',
+  'ProductSuppliesURL': 'http://localhost:8080/perico/v1/backend/orders/product-details',
 };
 
 /*

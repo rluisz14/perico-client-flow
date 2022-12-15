@@ -49,6 +49,10 @@ import {AdminComponent} from './intranet/admin/admin.component';
 import {SideNavigationComponent} from './intranet/side-navigation/side-navigation.component';
 import {DashboardComponent} from './intranet/dashboard/dashboard.component';
 import {LoggedGuard} from './guards/logged.guard';
+import {NewClientComponent} from './client-complete/new-client/new-client.component';
+import {OrderDetailsComponent} from './intranet/dashboard/order-details/order-details.component';
+import {OrderProductsComponent} from './intranet/dashboard/order-products/order-products.component';
+import {OrderSuppliesComponent} from './intranet/dashboard/order-products/order-supplies/order-supplies.component';
 
 // tslint:disable-next-line:max-line-length
 
@@ -71,7 +75,11 @@ import {LoggedGuard} from './guards/logged.guard';
     NavigationComponent,
     SideNavigationComponent,
     DashboardComponent,
-    AdminComponent
+    AdminComponent,
+    NewClientComponent,
+    OrderDetailsComponent,
+    OrderProductsComponent,
+    OrderSuppliesComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,7 +119,11 @@ import {LoggedGuard} from './guards/logged.guard';
   entryComponents: [
     ErrorMessageComponent,
     GenericDialog,
-    OrdersCategoryComponent
+    OrdersCategoryComponent,
+    NewClientComponent,
+    OrderDetailsComponent,
+    OrderProductsComponent,
+    OrderSuppliesComponent
   ]
 })
 export class AppModule {
