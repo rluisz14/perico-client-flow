@@ -144,8 +144,10 @@ export class ClientCompleteComponent implements OnInit {
       data: newClientOperation,
       panelClass: 'new-client-dialog',
       disableClose: false
-    }).afterClosed().subscribe(() => {
-      this.stepsConfirmOrder();
+    }).afterClosed().subscribe((r) => {
+      if (r === true) {
+        this.confirmOrder();
+      }
     });
   }
 

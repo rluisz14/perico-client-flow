@@ -5,6 +5,7 @@ import {Client} from './Model/Client';
 import {NewClientOperation} from '../Model/NewClientOperation';
 import {RegisterNewClientService} from '../../service/new-client.service';
 import {UtilModule} from '../../core/util.module';
+import {NewClientResponse} from '../Model/NewClientResponse';
 
 @Component({
   selector: 'app-new-client',
@@ -44,6 +45,9 @@ export class NewClientComponent implements OnInit {
     if (this.initialFormGroup.invalid) {
       return;
     }
+    if (!this.isValidatedPassword()) {
+      return;
+    }
     this.initialFormGroup.disable();
     this.registerPath();
   }
@@ -61,8 +65,8 @@ export class NewClientComponent implements OnInit {
     client['userType'] = 'CLIENT';
     client['userStatus'] = 'A';
     this.service.registerNewClientData(client).then(
-      (rs: any) => {
-        if (rs === true) {
+      (rs: NewClientResponse) => {
+        if (rs['personId']) {
           this.isLoading = false;
           this.dialogRef.close(true);
         }
@@ -95,7 +99,7 @@ export class NewClientComponent implements OnInit {
       });
     } else {
       this.initialFormGroup = this._formBuilder.group({
-        FullNameClientCtrl: [this.newClientOperation['client']['fullName'], Validators.required],
+        FullNameClientCtrl: [this.newClientOperation['client']['name'], Validators.required],
         EmailClientCtrl: [this.newClientOperation['client']['email'], Validators.required],
         DocumentNumberClientCtrl: [this.newClientOperation['client']['documentNumber'], Validators.required],
         PhoneNumberClientCtrl: [this.newClientOperation['client']['phoneNumber'], Validators.required],
@@ -123,4 +127,15 @@ export class NewClientComponent implements OnInit {
     return client;
   }
 
+  isValidatedPassword() {
+    return this.initialFormGroup.get('PasswordClientCtrl').value === this.initialFormGroup.get('ConfirmPasswordClientCtrl').value;
+  }
+
+  getPasswordMessage() {
+    if (this.isValidatedPassword()) {
+      return 'Constraseña Correcta';
+    } else {
+      return 'La Contraseña es Incorrecta';
+    }
+  }
 }
